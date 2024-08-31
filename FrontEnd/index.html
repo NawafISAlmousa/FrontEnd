@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,23 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header>
         <img src="images/SmallLogo.png" alt="Small WASEET Logo">
         <nav>
-            <a href="#" onclick="document.querySelector('.part2 h1').scrollIntoView({ behavior: 'smooth' });">About Us</a>
-            <a href="#" onclick="document.querySelector('footer').scrollIntoView({ behavior: 'smooth' });">Contact Us</a>
+            <a href="#" class="About">About
+                Us</a>
+            <a href="#" class="Contact">Contact
+                Us</a>
             <a href="#" class="login-btn">Log in</a>
+            <button class="arabic-btn">Arabic</button>
         </nav>
     </header>
     <main>
@@ -25,24 +33,29 @@
                 <img src="images/BigLogo.png" alt="Big WASEET Logo">
             </div>
             <div class="main-content">
-                <p>Your trusted bridge between local services and customers,<br> making it easier to find the right professionals <br>in your community.</p>
+                <p>Your trusted bridge between local services and customers,<br> making it easier to find the right
+                    professionals <br>in your community.</p>
                 <div class="tagline">Connecting Communities, One Service at a Time.</div>
                 <a href="#" class="join-btn">Join us</a>
             </div>
         </section>
         <section class="part2">
             <div class="aboutUs">
-              <h1 class="aboutUs-header">About Us</h1>
-              <p>WASEET acts as a connection between the service provider and the customer in need.</p>
+                <h1 class="aboutUs-header">About Us</h1>
+                <p>WASEET acts as a connection between the service provider and the customer in need.</p>
                 <div class="container">
                     <div class="customer">
                         <h1><i class="fa-solid fa-user" style="color: #ffffff;"></i><br>Customers</h1>
-                        <p>Looking for local services? Our platform makes it easy to find and compare businesses near you. Search by location, price, or service type, and discover the best options in your area. It's all about making your search simple and connecting you with your community.</p>
+                        <p>Looking for local services? Our platform makes it easy to find and compare businesses near
+                            you. Search by location, price, or service type, and discover the best options in your area.
+                            It's all about making your search simple and connecting you with your community.</p>
                     </div>
                     <div class="line"></div>
                     <div class="provider">
                         <h1><i class="fa-solid fa-store" style="color: #ffffff;"></i><br>Providers</h1>
-                        <p>Our platform helps local businesses connect with nearby customers. It's a simple space where you can showcase your services, reach more people, and grow your presence in the community. With easy-to-use mapping features, your business is always just a search away.</p>
+                        <p>Our platform helps local businesses connect with nearby customers. It's a simple space where
+                            you can showcase your services, reach more people, and grow your presence in the community.
+                            With easy-to-use mapping features, your business is always just a search away.</p>
                     </div>
                 </div>
             </div>
@@ -70,24 +83,6 @@
         </div>
     </footer>
 </body>
+<script src="landingPage.js"></script>
+
 </html>
-<script>
-    let lastScrollPosition = 0;
-const nav = document.querySelector('header');
-
-window.addEventListener('scroll', () => {
-    const currentScrollPosition = window.scrollY;
-
-    // Check if the user is scrolling down
-    if (currentScrollPosition > lastScrollPosition) {
-        // Scrolling down - hide the navbar
-        nav.style.top = '-60px'; // Adjust this value based on your navbar height
-    } else {
-        // Scrolling up - show the navbar
-        nav.style.top = '0';
-    }
-
-    // Update last scroll position
-    lastScrollPosition = currentScrollPosition;
-});
-</script>
