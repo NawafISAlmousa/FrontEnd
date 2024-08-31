@@ -40,7 +40,11 @@ nav a.login-btn {
     background-color: #00796b;
     color: white;
     padding: 8px 15px;
-    border-radius: 20px;
+    border-radius: 5px;
+}
+
+.login-btn:hover {
+    animation: switch 0.5s forwards;
 }
 
 .main {
