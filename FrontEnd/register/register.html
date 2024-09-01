@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register-style.css">
+    <title>Register as a Provider</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="form-container">
+            <header>
+                <img src="/FrontEnd/images/SmallLogo.png" alt="Logo" class="logo">
+                <h1>Register as a Provider</h1>
+            </header>
+            <form class="register-form">
+                <div class="form-flex">
+                    <div class="form-left">
+                        <label for="provider-name">Provider Name:</label>
+                        <input type="text" id="provider-name" name="provider-name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+
+                        <label for="confirm-password">Confirm Password:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                    </div>
+                    <div class="dividing-line"></div>
+                    <div class="form-right">
+                        <label for="description">Description:</label>
+                        <textarea id="description" name="description" rows="4"></textarea>
+
+                        <label for="tags">Tags:</label>
+                        <input type="text" id="tags" name="tags">
+
+                        <label for="upload-logo">Upload a Logo:</label>
+                        <input type="image" id="upload-logo" name="upload-logo">
+                    </div>
+                </div>
+                <div class="register-button-container">
+                    <button type="submit" class="register-button">Register</button>
+                </div>
+            </form>
+
+            <footer>
+                <p>Already a Customer? <a href="#">Login Now!</a></p>
+                <p><a href="#">Register As A Customer Instead</a></p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
