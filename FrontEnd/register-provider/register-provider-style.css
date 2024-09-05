@@ -6,7 +6,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100vh;  /* viewport height */
 }
 
 .main-container {
@@ -69,6 +69,7 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="password"],
+input[type="tel"],
 textarea {
     padding: 8px;
     margin-bottom: 15px;
@@ -82,7 +83,7 @@ input[type="file"] {
 }
 
 .register-button {
-    background-color: #2b8870;
+    background-color: #296879;
     color: white;
     border: none;
     padding: 10px;
@@ -100,7 +101,7 @@ input[type="file"] {
 }
 
 .register-button:hover {
-    background-color: #246d59;
+    background-color: #296879;
 }
 
 footer {
@@ -109,7 +110,7 @@ footer {
 }
 
 footer a {
-    color: #2b8870;
+    color: #296879;
     text-decoration: none;
 }
 

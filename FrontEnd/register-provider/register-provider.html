@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="register-style.css">
+    <link rel="stylesheet" href="register-provider-style.css">
     <title>Register as a Provider</title>
 </head>
 <body>
@@ -31,13 +31,17 @@
                     </div>
                     <div class="dividing-line"></div>
                     <div class="form-right">
+
+                        <label for="provider-number">Phone Number:</label>
+                        <input type="tel" id="provider-number" name="provider-number" required>
+
                         <label for="description">Description:</label>
                         <textarea id="description" name="description" rows="4"></textarea>
 
                         <label for="tags">Tags:</label>
                         <input type="text" id="tags" name="tags">
 
-                        <label for="upload-logo">Upload a Logo:</label>
+                        <label>Upload a Logo:</label>
                         <input type="file" id="upload-logo" name="upload-logo"  accept="image/png, image/jpg, image/jpeg">
                     </div>
                 </div>
@@ -47,7 +51,7 @@
             </form>
 
             <footer>
-                <p>Already a Customer? <a href="#">Login Now!</a></p>
+                <p>Already a Provider? <a href="#">Login Now!</a></p>
                 <p><a href="#">Register As A Customer Instead</a></p>
             </footer>
         </div>
