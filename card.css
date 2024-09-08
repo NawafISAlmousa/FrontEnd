@@ -1,0 +1,67 @@
+body {
+    font-family: 'Jost', sans-serif;
+}
+
+.provider-logo {
+    width: 90px;
+}
+
+.card {
+    width: 380px;
+    height: 255px;
+    margin: auto;
+    background-color: #DFDBDB;
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0 1px 4px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+h2 {
+    margin: 0;
+}
+
+.card-info {
+    text-align: center;
+}
+
+
+.provider-buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.provider-buttons button {
+    border: none;
+    background-color: #00796b;
+    color: #ffff;
+    padding: 10px;
+    width: 120px;
+    border-radius: 5px;
+}
+
+.span-km {
+    color: #00796b;
+}
+
+.card-rating {
+    font-weight: bold;
+}
+
+
+
+/* ignore this part  */
+
+
+.provider-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
