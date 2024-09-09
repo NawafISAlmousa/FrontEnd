@@ -52,15 +52,16 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" id="this">
             <div class="card-header">
                 <img src="FrontEnd/images/SmallLogo.png" alt="Provider Logo" class="provider-logo">
                 <div>
                     <span class="card-distance"><span class="span-km">100km</span> away from you</span>
                 </div>
             </div>
-            <div class="card-info">
+            <div class="card-info" id="that">
                 <h2>Style Shears</h2>
+                <p class="card-description">Lorem ipsum dolor sit amet consectetur adsrhh aefsaefsdfs wswrgsrfge5 etherethrythrtg rdgsetg</p>
                 <p class="card-rating">4.5 <i class="fa-solid fa-star" style="color:  #00796b;"></i></p>
                 <div class="provider-buttons">
                     <button class="map-button">Check on map</button>
@@ -73,5 +74,17 @@
 
     </div>
 </body>
+<script>
+    const card = document.querySelector("#this");
+    
+    card.addEventListener('mouseenter', () => {
+    document.querySelector('.card-description').style.display = 'block';
+    document.querySelector('#that').style.marginTop = '5px';
+});
+    card.addEventListener('mouseleave', () => {
+    document.querySelector('.card-description').style.display = 'none';
+    document.querySelector('#that').style.marginTop = '45px';
+});
+</script>
 
 </html>

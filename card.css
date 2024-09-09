@@ -8,12 +8,17 @@ body {
 
 .card {
     width: 380px;
-    height: 255px;
+    height: 280px;
     margin: auto;
     background-color: #DFDBDB;
     padding: 25px;
     border-radius: 25px;
     box-shadow: 0 1px 4px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover{
+    transform: scale(1.05);
 }
 
 .card-header {
@@ -33,7 +38,7 @@ h2 {
 
 
 .provider-buttons {
-    margin-top: 40px;
+    margin-top: 45px;
     display: flex;
     justify-content: space-around;
 }
@@ -45,6 +50,11 @@ h2 {
     padding: 10px;
     width: 120px;
     border-radius: 5px;
+}
+
+.card-description{
+    display: none;
+    margin: 0;
 }
 
 .span-km {
