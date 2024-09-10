@@ -57,6 +57,18 @@ h2 {
     margin: 0;
 }
 
+
+
+@keyframes description {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+
 .span-km {
     color: #00796b;
 }

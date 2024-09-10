@@ -1,12 +1,12 @@
 body {
-    margin: 0;
+    margin: 10px;
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #ffffff; /* Main background color */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;  /* viewport height */
+    height: 100%;
 }
 
 .main-container {
@@ -102,6 +102,31 @@ input[type="file"] {
 
 .register-button:hover {
     background-color: #296879;
+}
+
+.upload-logo{
+    display: flex;
+}
+
+.logo-input{
+    width: 90px;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Image preview styles */
+.logo-preview-container {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.logo-preview {
+    display: none;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #ccc;
 }
 
 footer {
