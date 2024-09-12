@@ -1,7 +1,10 @@
 /* General Styles */
+*{
+    font-family: "Jost", sans-serif;
+}
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
     background-color: #ffffff; /* White background for the whole body */
 }
 
@@ -134,7 +137,13 @@ h1 {
 }
 
 .dynamic-content{
-    background-color: #76cec4;
+    padding: 25px 25px 57px 25px;
+    background-color: #61a69f;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 20px;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Provider Card Styles */
@@ -185,4 +194,103 @@ h1 {
 
 .map-button:hover, .more-button:hover {
     background-color: #005f54;
+}
+
+
+.provider-logo {
+    width: 90px;
+}
+
+.card {
+    width: 380px;
+    height: 280px;
+    margin: auto;
+    background-color: #DFDBDB;
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0 1px 4px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+h2 {
+    margin: 0;
+}
+
+.card-info {
+    text-align: center;
+}
+
+
+.top-right{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    
+}
+
+
+.provider-buttons {
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.provider-buttons button {
+    border: none;
+    background-color: #00796b;
+    color: #ffff;
+    padding: 10px;
+    width: 120px;
+    border-radius: 5px;
+}
+
+.card-description{
+    display: none;
+    margin: 0;
+}
+
+
+
+@keyframes description {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+.span-km {
+    color: #00796b;
+}
+
+.card-rating {
+    font-weight: bold;
+}
+
+
+
+
+
+.provider-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.error-message{
+    margin: 150px;
+    color: black;
 }

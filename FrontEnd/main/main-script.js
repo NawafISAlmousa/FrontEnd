@@ -20,9 +20,10 @@ const dynamicContent = document.getElementById('dynamicContent');
 const providerCardsContainer = document.getElementById('providerCards');
 const cards = document.querySelectorAll('.card');
 
+console.log(dynamicContent.childElementCount)
 
 
-// Fetch providers from API and render cards
+//Fetch providers from API and render cards
 async function fetchProviders() {
     try {
         // Replace with your API endpoint
@@ -37,6 +38,7 @@ async function fetchProviders() {
 
 // Render provider cards
 function renderProviderCards(providers) {
+    dynamicContent.innerHTML = "";
     providers.forEach(provider => {
         const card = document.createElement('div');
         card.classList.add('provider-card');
@@ -44,9 +46,10 @@ function renderProviderCards(providers) {
                <div class="card" >
             <div class="card-header">
                 <img src="${provider.logo}" alt="Provider Logo" class="provider-logo">
-                <div>
-                    <span class="card-distance"><span class="span-km">${provider.distance}</span> away from you</span>
-                </div>
+               <div class="top-right">
+                    <div> <i class="fa-regular fa-bookmark fa-xl" style="color: #00796b; margin-bottom: 25px;"></i></div>
+                     <div class="card-distance"><span class="span-km">${provider.distance}km</span> away from you</div>
+                 </div>
             </div>
             <div class="card-info">
                 <h2>${provider.name}</h2>
@@ -61,7 +64,14 @@ function renderProviderCards(providers) {
         `;
         providerCardsContainer.appendChild(card);
     });
+    if(dynamicContent.childElementCount === 0){
+        const message = document.createElement('h1');
+        message.classList.add('error-message')
+        message.innerHTML = "Sorry, we could not find anything!"
+        dynamicContent.appendChild(message);
+     }
 }
+
 
 // Infinite scroll to load more cards
 window.addEventListener('scroll', () => {

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="provider-page.css">
+    <title>Toggle Navigation</title>
+</head>
+<body>
+    <header class="header">
+        <img src="/FrontEnd/images/SmallLogo.png" alt="WASEET Logo" class="logo">
+        <nav class="nav-bar">
+            <div class="toggle-container">
+                <button class="toggle-option active" data-section="locations">Locations</button>
+                <button class="toggle-option" data-section="items">Items</button>
+                <button class="toggle-option" data-section="events">Events</button>
+                <button class="toggle-option" data-section="profile">Profile</button>
+                <div class="toggle-slider"></div>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="nav-link">Direct Messages</a>
+                <button class="logout-button">Logout</button>
+            </div>
+        </nav>
+    </header>
+    <main class="content">
+        <section id="locations" class="content-section active">Locations Content</section>
+        <section id="items" class="content-section">Items Content</section>
+        <section id="events" class="content-section">Events Content</section>
+        <section id="profile" class="content-section">Profile Content</section>
+    </main>
+
+    <script src="provider-page.js"></script>
+</body>
+</html>
