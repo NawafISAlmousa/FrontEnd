@@ -3,6 +3,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('.content-section');
     const slider = document.querySelector('.toggle-slider');
 
+    function previewLogo(event) {
+        const [file] = event.target.files;
+        if (file) {
+            const preview = document.getElementById('logo');
+            preview.src = URL.createObjectURL(file);
+        }
+    }
+
+    document.querySelector(".logo-input").addEventListener("change", previewLogo)
+
+    document.querySelector(".change-logo").addEventListener("click", triggerFileInput)
+    
+
+    function triggerFileInput() {
+        document.getElementById('upload-logo').click();
+    }
+
     toggleButtons.forEach((button, index) => {
         button.addEventListener('click', () => {
             // Remove active class from all buttons

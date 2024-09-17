@@ -15,10 +15,10 @@
         <img src="/FrontEnd/images/SmallLogo.png" alt="WASEET Logo" class="logo">
         <nav class="nav-bar">
             <div class="toggle-container">
-                <button class="toggle-option active" data-section="locations">Locations</button>
+                <button class="toggle-option active" data-section="profile">Profile</button>
+                <button class="toggle-option" data-section="locations">Locations</button>
                 <button class="toggle-option" data-section="items">Items</button>
                 <button class="toggle-option" data-section="events">Events</button>
-                <button class="toggle-option" data-section="profile">Profile</button>
                 <div class="toggle-slider"></div>
             </div>
             <div class="nav-links">
@@ -28,10 +28,69 @@
         </nav>
     </header>
     <main class="content">
-        <section id="locations" class="content-section active">Locations Content</section>
+        <section id="profile" class="content-section active">
+            <form class="edit-profile-form">
+                
+                <div class="hidden-logo-input">
+                    <input class="logo-input" type="file" id="upload-logo" name="upload-logo" accept="image/png, image/jpg, image/jpeg">
+                </div>
+                <!-- Image preview container -->
+                <div class="logo-container">
+                    <div class="change-logo">
+                        <img id="logo" src="/FrontEnd/images/BigLogo.png" alt="Logo Preview" class="logo-preview">
+                    </div>
+                </div>
+
+                <div class="form-flex">
+                    <div class="form-left">
+                        <label for="provider-name">Provider Name:</label>
+                        <input type="text" id="provider-name" name="provider-name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+
+                        <label for="confirm-password">Confirm Password:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                    </div>
+                    <div class="dividing-line"></div>
+                    <div class="form-right">
+                        <label for="provider-number">Phone Number:</label>
+                        <input type="tel" id="provider-number" name="provider-number" required>
+
+                        <label for="description">Description:</label>
+                        <textarea id="description" name="description" rows="4"></textarea>
+
+                        <label for="tags">Tags:</label>
+                        <input type="text" id="tags" name="tags">
+                    </div>
+                </div>
+                <div class="save-button-container">
+                    <button type="submit" class="save-button">Save</button>
+                </div>
+            </form>
+        </section>
+        <section id="locations" class="content-section">
+            <div class="profile-container">
+                <div class="profile-list">
+                    <ul>
+                        <li><div class="location-card"></div></li>
+                    </ul>
+                </div>
+                <dive class="edit-form">
+                    <form action="">
+                        <div class="edit-container">
+
+                        </div>
+                        <button></button>
+                    </form>
+                </div>
+            </div>
+        </section>
         <section id="items" class="content-section">Items Content</section>
         <section id="events" class="content-section">Events Content</section>
-        <section id="profile" class="content-section">Profile Content</section>
     </main>
 
     <script src="provider-page.js"></script>
