@@ -1,5 +1,6 @@
 Blue: #296879
 Green: #00796b
 light green: #95bdb8
+light gray: #ebebeb
 
 Margin order: top right bottom left

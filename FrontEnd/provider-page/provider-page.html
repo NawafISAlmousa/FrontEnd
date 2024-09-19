@@ -7,7 +7,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="provider-page.css">
+
+
+
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
     <title>Toggle Navigation</title>
 </head>
 <body>
@@ -72,26 +82,128 @@
                 </div>
             </form>
         </section>
+
+<!-- ============================================================================================== -->
+
         <section id="locations" class="content-section">
             <div class="profile-container">
                 <div class="profile-list">
+                    <h1 class="profile-list-header">Current Locations</h1>
+                    <div class="breaking-line"></div>
                     <ul>
-                        <li><div class="location-card"></div></li>
+                        <li>
+                            <div class="item-container">
+                                <div class="logo-holder">
+                                    <img src="https://m.media-amazon.com/images/I/41jRLvpI7xL._AC_SX679_.jpg" alt="" class="item-logo">
+                                </div>
+                                <div class="item-info">
+                                    <h1>DeLonghi</h1>
+                                    <p>DeLonghi Electric Coffee-Bean Grinder with Stainless Steel Blade - 79kg</p>
+                                </div>
+                                <div class="edit-delete-btn">
+                                    <i class="fa-solid fa-trash"></i>
+                                    <i class="fa-solid fa-pen-to-square" ></i>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-container">
+                                <div class="logo-holder">
+                                    <img src="https://m.media-amazon.com/images/I/41jRLvpI7xL._AC_SX679_.jpg" alt="" class="item-logo">
+                                </div>
+                                <div class="item-info">
+                                    <h1>DeLonghi</h1>
+                                    <p>DeLonghi Electric Coffee-Bean Grinder with Stainless Steel Blade - 79kg</p>
+                                </div>
+                                <div class="edit-delete-btn">
+                                    <i class="fa-solid fa-trash"></i>
+                                    <i class="fa-solid fa-pen-to-square" ></i>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-container">
+                                <div class="logo-holder">
+                                    <img src="https://m.media-amazon.com/images/I/41jRLvpI7xL._AC_SX679_.jpg" alt="" class="item-logo">
+                                </div>
+                                <div class="item-info">
+                                    <h1>DeLonghi</h1>
+                                    <p>DeLonghi Electric Coffee-Bean Grinder with Stainless Steel Blade - 79kg</p>
+                                </div>
+                                <div class="edit-delete-btn">
+                                    <i class="fa-solid fa-trash"></i>
+                                    <i class="fa-solid fa-pen-to-square" ></i>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
+                    <button class="add-button">Add New Location</button>
                 </div>
-                <dive class="edit-form">
-                    <form action="">
-                        <div class="edit-container">
-
+                <div class="edit-location-form">
+                    <div class="location-map" id="map"></div>
+                    <form action="" class="location-form-container">
+                        
+                        <div>
+                            <div class="form-group">
+                                <label for="location-name">Location name:</label>
+                                <input type="text" id="location-name" name="location-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="location-number">Phone Number:</label>
+                                <input type="tel" id="location-number" name="location-number" required>
+                            </div>
                         </div>
-                        <button></button>
+                       
+                        <div class="save-button-container">
+                            <button>Save</button>
+                        </div>
+                        
                     </form>
                 </div>
             </div>
+
+            <div class="pop-up-shadow"></div>
+            <div class="pop-up">
+                <div class="form-wrapper">
+                    <div id="map" class="map-container"></div>
+                    <form class="location-form" action="#">
+                        <div class="form-group">
+                            <label for="locationName" class="form-label">Location name:</label>
+                            <input type="text" id="locationName" name="locationName" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNumber" class="form-label">Phone Number:</label>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" class="form-input" required>
+                        </div>
+                        <button type="submit" class="form-button">Save</button>
+                    </form>
+                </div>
+            </div>
+
         </section>
         <section id="items" class="content-section">Items Content</section>
         <section id="events" class="content-section">Events Content</section>
     </main>
+    
+
+    
+
+    
+     <script>
+        // Initialize the map and set the view to Riyadh's coordinates
+        var map = L.map('map').setView([48.858222, 2.294500], 10); // Coordinates for Riyadh
+
+        // Add OpenStreetMap tiles to the map
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Add a marker for Riyadh
+        L.marker([48.858222, 2.294500]).addTo(map)
+            .bindPopup('Riyadh, Saudi Arabia')
+            .openPopup();
+    </script>
 
     <script src="provider-page.js"></script>
 </body>

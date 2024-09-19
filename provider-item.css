@@ -36,3 +36,24 @@ h1 {
     width: 65%;
     padding: 10px;
 }
+
+.fa-pen-to-square{
+    color: #296879;
+}
+
+.fa-pen-to-square:hover{
+    color: gold;
+    scale: 1.2;
+    cursor: pointer;
+}
+
+
+.fa-trash{
+    color: #296879;
+}
+
+.fa-trash:hover{
+    color: red;
+    scale: 1.2;
+    cursor: pointer;
+}
