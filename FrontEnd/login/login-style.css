@@ -1,12 +1,15 @@
 /* General Styles */
+*{
+    font-family: "Jost", sans-serif;
+}
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
     background-color: #f8f8f8;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
 }
 
 .login-container {

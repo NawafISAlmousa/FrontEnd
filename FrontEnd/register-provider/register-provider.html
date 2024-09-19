@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
     <link rel="stylesheet" href="register-provider-style.css">
     <title>Register as a Provider</title>
 </head>
@@ -31,7 +35,6 @@
                     </div>
                     <div class="dividing-line"></div>
                     <div class="form-right">
-
                         <label for="provider-number">Phone Number:</label>
                         <input type="tel" id="provider-number" name="provider-number" required>
 
@@ -40,9 +43,16 @@
 
                         <label for="tags">Tags:</label>
                         <input type="text" id="tags" name="tags">
-
-                        <label>Upload a Logo:</label>
-                        <input type="file" id="upload-logo" name="upload-logo"  accept="image/png, image/jpg, image/jpeg">
+                        <div class="upload-logo">
+                            <div>
+                                <label>Upload a Logo:</label>
+                                <input class="logo-input" type="file" id="upload-logo" name="upload-logo" accept="image/png, image/jpg, image/jpeg" onchange="previewLogo(event)" >
+                            </div>
+                            <!-- Image preview container -->
+                            <div class="logo-preview-container">
+                                <img id="logo-preview" src="/FrontEnd/images/BigLogo.png" alt="Logo Preview" class="logo-preview">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="register-button-container">
@@ -56,5 +66,16 @@
             </footer>
         </div>
     </div>
+
+    <script>
+        function previewLogo(event) {
+            const [file] = event.target.files;
+            if (file) {
+                const preview = document.getElementById('logo-preview');
+                preview.src = URL.createObjectURL(file);
+                preview.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>

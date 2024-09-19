@@ -21,14 +21,16 @@
         <div class="card">
             <div class="card-header">
                 <img src="FrontEnd/images/SmallLogo.png" alt="Provider Logo" class="provider-logo">
-                <div>
-                    <span class="card-distance"><span class="span-km">100km</span> away from you</span>
+                <div class="top-right">
+                   <div> <i class="fa-regular fa-bookmark fa-xl" style="color: #00796b; margin-bottom: 25px;"></i></div>
+                    <div class="card-distance"><span class="span-km">100km</span> away from you</div>
                 </div>
             </div>
             <div class="card-info">
                 <h2>Style Shears</h2>
+                <p class="card-description">Lorem ipsum dolor sit amet consectetur adsrhh aefsaefsdfs wswrgsrfge5 etherethrythrtg rdgsetg</p>
                 <p class="card-rating">4.5 <i class="fa-solid fa-star" style="color:  #00796b;"></i></p>
-                <div class="provider-buttons">
+                <div class="provider-buttons" id="that">
                     <button class="map-button">Check on map</button>
                     <button class="more-button">See more</button>
                 </div>
@@ -44,15 +46,16 @@
             </div>
             <div class="card-info">
                 <h2>Style Shears</h2>
+                <p class="card-description">Lorem ipsum dolor sit amet consectetur adsrhh aefsaefsdfs wswrgsrfge5 etherethrythrtg rdgsetg</p>
                 <p class="card-rating">4.5 <i class="fa-solid fa-star" style="color:  #00796b;"></i></p>
-                <div class="provider-buttons">
+                <div class="provider-buttons" id="that">
                     <button class="map-button">Check on map</button>
                     <button class="more-button">See more</button>
                 </div>
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" >
             <div class="card-header">
                 <img src="FrontEnd/images/SmallLogo.png" alt="Provider Logo" class="provider-logo">
                 <div>
@@ -61,8 +64,9 @@
             </div>
             <div class="card-info">
                 <h2>Style Shears</h2>
+                <p class="card-description">Lorem ipsum dolor sit amet consectetur adsrhh aefsaefsdfs wswrgsrfge5 etherethrythrtg rdgsetg</p>
                 <p class="card-rating">4.5 <i class="fa-solid fa-star" style="color:  #00796b;"></i></p>
-                <div class="provider-buttons">
+                <div class="provider-buttons" id="that">
                     <button class="map-button">Check on map</button>
                     <button class="more-button">See more</button>
                 </div>
@@ -73,5 +77,40 @@
 
     </div>
 </body>
+<script>
+// Select all the card elements
+const cards = document.querySelectorAll('.card');
+
+// Iterate through each card
+cards.forEach(card => {
+    // Add mouseenter event listener to each card
+    card.addEventListener('mouseenter', () => {
+        // Find the specific description and button container within the hovered card
+        const description = card.querySelector('.card-description');
+        const buttons = card.querySelector('.provider-buttons');
+
+        // Show and animate the description
+        description.style.display = 'block';
+        description.style.animation = 'description 0.5s forwards';
+
+        // Adjust the margin of the buttons container
+        buttons.style.marginTop = '5px';
+    });
+
+    // Add mouseleave event listener to each card
+    card.addEventListener('mouseleave', () => {
+        // Find the specific description and button container within the hovered card
+        const description = card.querySelector('.card-description');
+        const buttons = card.querySelector('.provider-buttons');
+
+        // Hide the description
+        description.style.display = 'none';
+
+        // Reset the margin of the buttons container
+        buttons.style.marginTop = '45px';
+    });
+});
+
+</script>
 
 </html>
