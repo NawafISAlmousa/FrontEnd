@@ -1,0 +1,38 @@
+body {
+    font-family: 'Jost', sans-serif;
+    margin: 20px;
+}
+
+
+.container {
+    padding: 25px 15px;
+    height: auto;
+    width: 525px;
+    /* background-color: #bfced2; */
+    border-radius: 5px;
+    display: flex;
+    box-shadow: 1px 2px 4px black;
+}
+
+
+h1 {
+    color: #296879;
+
+}
+
+.edit-delete-btn {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 120px;
+
+}
+
+.item-info {
+    width: 65%;
+    padding: 10px;
+}
