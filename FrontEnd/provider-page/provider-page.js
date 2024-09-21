@@ -39,4 +39,15 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById(sectionId).classList.add('active');
         });
     });
+    // Initialize the map and set the view to Riyadh's coordinates
+    var map = L.map('map').setView([48.858222, 2.294500], 10); // Coordinates for Riyadh
+
+    // Add OpenStreetMap tiles to the map
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Add a marker for Riyadh
+    L.marker([48.858222, 2.294500]).addTo(map).bindPopup('Riyadh, Saudi Arabia').openPopup();
 });

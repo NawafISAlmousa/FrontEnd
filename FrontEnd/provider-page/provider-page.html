@@ -11,6 +11,10 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="provider-page.css">
+    <link rel="stylesheet" href="provider-page-profile.css">
+    <link rel="stylesheet" href="provider-page-locations.css">
+    <link rel="stylesheet" href="provider-page-items.css">
+    <link rel="stylesheet" href="provider-page-events.css">
 
 
 
@@ -18,7 +22,7 @@
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
-    <title>Toggle Navigation</title>
+    <title>Provider Main Page</title>
 </head>
 <body>
     <header class="header">
@@ -47,7 +51,7 @@
                 <!-- Image preview container -->
                 <div class="logo-container">
                     <div class="change-logo">
-                        <img id="logo" src="/FrontEnd/images/BigLogo.png" alt="Logo Preview" class="logo-preview">
+                        <img class="logo-preview" id="logo" src="/FrontEnd/images/BigLogo.png" alt="Logo Preview">
                     </div>
                 </div>
 
@@ -86,19 +90,19 @@
 <!-- ============================================================================================== -->
 
         <section id="locations" class="content-section">
-            <div class="profile-container">
-                <div class="profile-list">
-                    <h1 class="profile-list-header">Current Locations</h1>
+            <div class="locations-container">
+                <div class="locations-list">
+                    <h1 class="locations-list-header">Current Locations</h1>
                     <div class="breaking-line"></div>
-                    <ul>
+                    <ul class="location-unordered-list">
                         <li>
-                            <div class="item-container">
-                                <div class="logo-holder">
-                                    <img src="https://m.media-amazon.com/images/I/41jRLvpI7xL._AC_SX679_.jpg" alt="" class="item-logo">
+                            <div class="loc-container">
+                                <div class="loc-logo-holder">
+                                    <img src="/FrontEnd/images/location-dot-solid.svg" alt="" class="loc-logo">
                                 </div>
-                                <div class="item-info">
+                                <div class="loc-info">
                                     <h1>DeLonghi</h1>
-                                    <p>DeLonghi Electric Coffee-Bean Grinder with Stainless Steel Blade - 79kg</p>
+                                    <p>0535001317</p>
                                 </div>
                                 <div class="edit-delete-btn">
                                     <i class="fa-solid fa-trash"></i>
@@ -107,13 +111,13 @@
                             </div>
                         </li>
                         <li>
-                            <div class="item-container">
-                                <div class="logo-holder">
-                                    <img src="https://m.media-amazon.com/images/I/41jRLvpI7xL._AC_SX679_.jpg" alt="" class="item-logo">
+                            <div class="loc-container">
+                                <div class="loc-logo-holder">
+                                    <img src="/FrontEnd/images/location-dot-solid.svg" alt="" class="loc-logo">
                                 </div>
-                                <div class="item-info">
+                                <div class="loc-info">
                                     <h1>DeLonghi</h1>
-                                    <p>DeLonghi Electric Coffee-Bean Grinder with Stainless Steel Blade - 79kg</p>
+                                    <p>0535001317</p>
                                 </div>
                                 <div class="edit-delete-btn">
                                     <i class="fa-solid fa-trash"></i>
@@ -122,13 +126,13 @@
                             </div>
                         </li>
                         <li>
-                            <div class="item-container">
-                                <div class="logo-holder">
-                                    <img src="https://m.media-amazon.com/images/I/41jRLvpI7xL._AC_SX679_.jpg" alt="" class="item-logo">
+                            <div class="loc-container">
+                                <div class="loc-logo-holder">
+                                    <img src="/FrontEnd/images/location-dot-solid.svg" alt="" class="loc-logo">
                                 </div>
-                                <div class="item-info">
+                                <div class="loc-info">
                                     <h1>DeLonghi</h1>
-                                    <p>DeLonghi Electric Coffee-Bean Grinder with Stainless Steel Blade - 79kg</p>
+                                    <p>0535001317</p>
                                 </div>
                                 <div class="edit-delete-btn">
                                     <i class="fa-solid fa-trash"></i>
@@ -181,29 +185,17 @@
             </div>
 
         </section>
+
+<!-- ============================================================================================== -->
+
         <section id="items" class="content-section">Items Content</section>
+
+<!-- ============================================================================================== -->
+
+
         <section id="events" class="content-section">Events Content</section>
     </main>
     
-
-    
-
-    
-     <script>
-        // Initialize the map and set the view to Riyadh's coordinates
-        var map = L.map('map').setView([48.858222, 2.294500], 10); // Coordinates for Riyadh
-
-        // Add OpenStreetMap tiles to the map
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-
-        // Add a marker for Riyadh
-        L.marker([48.858222, 2.294500]).addTo(map)
-            .bindPopup('Riyadh, Saudi Arabia')
-            .openPopup();
-    </script>
 
     <script src="provider-page.js"></script>
 </body>
