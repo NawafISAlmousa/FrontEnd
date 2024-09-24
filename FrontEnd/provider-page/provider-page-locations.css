@@ -77,7 +77,6 @@
     border-radius: 20px;
     padding: 25px;
     box-shadow: 1px 2px 4px black;
-
 }
 
 .location-form-container{
@@ -106,7 +105,7 @@
 }
 
 .map-container {
-    height: 150px;
+    height: 180px;
     border-radius: 10px;
     margin-bottom: 20px;
 }
@@ -166,15 +165,6 @@
 .location-unordered-list{
     list-style-type: none;
     padding: 0;
-}
-
-.edit-location-form{
-    background-color: #f4f4f4;
-    width: 550px;
-    border-radius: 20px;
-    padding: 25px;
-    box-shadow: 1px 2px 4px black;
-
 }
 
 .location-form-container{
@@ -290,10 +280,10 @@
     box-sizing: border-box;
 }
 
-.edit-location-form {
-    max-width: 300px; /* Adjust width if needed */
+/* .edit-location-form {
+    max-width: 300px; 
     margin: 0 auto;
-}
+} */
 
 .location-form-container button {
     margin-top: 10px;
