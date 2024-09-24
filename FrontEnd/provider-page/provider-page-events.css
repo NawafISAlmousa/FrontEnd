@@ -159,11 +159,41 @@
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    align-events: center;
+    align-items: center;
     box-shadow: 1px 2px 4px black;
     height:86vh;
 
 }
+
+.event-details{
+    margin-top: 10px;
+}
+
+.date-container, .time-container{
+    display: flex;
+}
+
+.date-container label, .time-container label{
+    width: 10px;
+    margin:8px 0 0 8px;
+}
+
+.date-container input, .time-container input{
+    margin-right: 20px;
+}
+
+
+.event-date , .event-time{
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+.event-date p , .event-time p{
+    margin-left: 10px;
+}
+
+
 .event-unordered-list{
     list-style-type: none;
     padding: 0;

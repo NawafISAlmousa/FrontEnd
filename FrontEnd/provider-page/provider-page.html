@@ -333,12 +333,17 @@
                             <div class="event-info">
                                 <div class="event-info-header">
                                     <h1>DeLonghi</h1> 
-                                    <p class="price" style="color: #6ee665;">23.99 SAR</p>
                                 </div>
                                 
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea maxime iure illo ipsa quidem! Eaque quos nihil laboriosam, minima aut voluptates perspiciatis voluptatum omnis velit nostrum ex, architecto cupiditate id.</p>
-                                <div class="event-locations">
-                                    <p>loa</p> <p>loa2</p> <p>loa4</p> <p>loa al-sultan</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates possimus deleniti qui a obcaecati est cupiditate, ut consequatur ullam? Mollitia iste ab labore enim nulla! Dolore nesciunt harum error in.</p>
+                                <div class="event-details">
+                                    <div class="event-date">
+                                        <i class="fa-regular fa-calendar"></i><p>8/12/24 - 8/15/24</p>
+                                    </div>
+
+                                    <div class="event-time">
+                                        <i class="fa-regular fa-clock"></i><p>13:00 - 20:00</p>
+                                    </div>
+
                                 </div>
                             </div>
                             <div class="edit-delete-btn">
@@ -347,37 +352,7 @@
                             </div>
                         </div>
                     </li>
-                    <li>
-                        <div class="event-container">
-                            <div class="event-logo-holder">
-                                <img src="/FrontEnd/images/event-dot-solid.svg" alt="" class="event-logo">
-                            </div>
-                            <div class="event-info">
-                                <h1>DeLonghi</h1>
-                                <p>0535001317</p>
-                            </div>
-                            <div class="edit-delete-btn">
-                                <i class="fa-solid fa-trash"></i>
-                                <i class="fa-solid fa-pen-to-square" ></i>
-                            </div>
-                            
-                        </div>
-                    </li>
-                    <li>
-                        <div class="event-container">
-                            <div class="event-logo-holder">
-                                <img src="/FrontEnd/images/event-dot-solid.svg" alt="" class="event-logo">
-                            </div>
-                            <div class="event-info">
-                                <h1>DeLonghi</h1>
-                                <p>0535001317</p>
-                            </div>
-                            <div class="edit-delete-btn">
-                                <i class="fa-solid fa-trash"></i>
-                                <i class="fa-solid fa-pen-to-square" ></i>
-                            </div>
-                        </div>
-                    </li>
+            
                 </ul>
                 <button class="add-button">Add New event</button>
             </div>
@@ -397,16 +372,20 @@
         
                     <div>
                         <div class="form-group">
-                            <label for="event-name">event name:</label>
+                            <label for="event-name">Event name:</label>
                             <input type="text" id="event-name" name="event-name" required>
                         </div>
-                        <div class="form-group">
-                            <label for="event-number">Price:</label>
-                            <input type="number" id="event-number" name="event-number" required>
+                        <div class="form-group date-container">
+                            <label for="event-number">Start date:</label>
+                            <input type="date" id="event-number" name="event-start-date" required>
+                            <label for="event-number">End date:</label>
+                            <input type="date" id="event-number" name="event-end-date" required>
                         </div>
-                        <div class="form-group">
-                            <label for="event-name">Description:</label>
-                            <textarea type="text" id="event-name" name="event-name" required style="resize: none;"></textarea>
+                        <div class="form-group time-container">
+                            <label for="event-number">Start time:</label>
+                            <input type="time" id="event-number" name="event-start-time" required>
+                            <label for="event-number">End time:</label>
+                            <input type="time" id="event-number" name="event-end-time" required>
                         </div>
                           <div class="form-group">
                             <label for="event-name">Locations:</label>

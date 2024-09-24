@@ -17,6 +17,8 @@
     background: #0c4851; /* Color when hovered */
 }
 
+
+
 .items-container{
     display: flex;    
     width: 1200px;
@@ -26,6 +28,7 @@
     gap: 50px;
     margin: auto;
     position: relative;
+   
 }
 
 .pop-up{
@@ -161,7 +164,7 @@
     flex-direction: column;
     align-items: center;
     box-shadow: 1px 2px 4px black;
-    height:86vh;
+    height:75vh;
 
 }
 .item-unordered-list{
@@ -173,7 +176,7 @@
 
 .item-form-container{
     display: block;
-    height: 570px;
+    height: 750px;
 }
 
 .items-list-header{
