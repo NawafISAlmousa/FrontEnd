@@ -68,7 +68,8 @@ h1 {
 }
 
 .search-container{
-    padding-right: 30%;
+    /* padding-right: 30%; */
+    margin: auto;
 }
 
 .sort-select, .search-input {

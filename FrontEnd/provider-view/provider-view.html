@@ -1,0 +1,95 @@
+<section id="items" class="content-section">
+    <div class="items-container">
+        <div class="items-list">
+            <h1 class="items-list-header">Current items</h1>
+            <div class="breaking-line"></div>
+            <ul class="item-unordered-list">
+                <li>
+                    <div class="item-container">
+                        <div class="item-logo-holder">
+                            <img src="/FrontEnd/images/item-dot-solid.svg" alt="" class="item-logo">
+                        </div>
+                        <div class="item-info">
+                            <h1>DeLonghi</h1>
+                            <p>0535001317</p>
+                        </div>
+                        <div class="edit-delete-btn">
+                            <i class="fa-solid fa-trash"></i>
+                            <i class="fa-solid fa-pen-to-square" ></i>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-container">
+                        <div class="item-logo-holder">
+                            <img src="/FrontEnd/images/item-dot-solid.svg" alt="" class="item-logo">
+                        </div>
+                        <div class="item-info">
+                            <h1>DeLonghi</h1>
+                            <p>0535001317</p>
+                        </div>
+                        <div class="edit-delete-btn">
+                            <i class="fa-solid fa-trash"></i>
+                            <i class="fa-solid fa-pen-to-square" ></i>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-container">
+                        <div class="item-logo-holder">
+                            <img src="/FrontEnd/images/item-dot-solid.svg" alt="" class="item-logo">
+                        </div>
+                        <div class="item-info">
+                            <h1>DeLonghi</h1>
+                            <p>0535001317</p>
+                        </div>
+                        <div class="edit-delete-btn">
+                            <i class="fa-solid fa-trash"></i>
+                            <i class="fa-solid fa-pen-to-square" ></i>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <button class="add-button">Add New item</button>
+        </div>
+        <div class="edit-item-form">
+            <div class="item-map" id="map"></div>
+            <form action="" class="item-form-container">
+                
+                <div>
+                    <div class="form-group">
+                        <label for="item-name">item name:</label>
+                        <input type="text" id="item-name" name="item-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="item-number">Phone Number:</label>
+                        <input type="tel" id="item-number" name="item-number" required>
+                    </div>
+                </div>
+               
+                <div class="save-button-container">
+                    <button>Save</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+    
+    <div class="pop-up-shadow"></div>
+    <div class="pop-up">
+        <div class="form-wrapper">
+            <div id="map" class="map-container"></div>
+            <form class="item-form" action="#">
+                <div class="form-group">
+                    <label for="itemName" class="form-label">item name:</label>
+                    <input type="text" id="itemName" name="itemName" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber" class="form-label">Phone Number:</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" class="form-input" required>
+                </div>
+                <button type="submit" class="form-button">Save</button>
+            </form>
+        </div>
+    </div>
+</section>
