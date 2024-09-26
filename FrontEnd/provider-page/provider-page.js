@@ -50,4 +50,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add a marker for Riyadh
     L.marker([48.858222, 2.294500]).addTo(map).bindPopup('Riyadh, Saudi Arabia').openPopup();
+
+    document.getElementById('start-date').addEventListener('click', function() {
+        this.showPicker(); // This will trigger the time picker to appear
+      });
+    
+      document.getElementById('end-date').addEventListener('click', function() {
+        this.showPicker(); // This will trigger the time picker to appear
+      });
+
+    document.getElementById('start-time').addEventListener('click', function() {
+        this.showPicker(); // This will trigger the time picker to appear
+      });
+    
+      document.getElementById('end-time').addEventListener('click', function() {
+        this.showPicker(); // This will trigger the time picker to appear
+      });
 });
